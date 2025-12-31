@@ -1,9 +1,9 @@
 import React from 'react'
 
-const add-habit-form = () => {
+const AddHabitForm = () => {
   return (
     <div>add-habit-form</div>
   )
 }
 
-export default add-habit-form
+export default AddHabitForm
