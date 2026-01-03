@@ -32,7 +32,7 @@ const AddHabitForm: React.FC = () => {
         onChange={(e) => setName(e.target.value)} 
         placeholder='Enter habit name' 
         fullWidth />
-        <FormControl fullWidth>
+        <FormControl fullWidth style={{marginTop: 5}}>
           <InputLabel>Frequency</InputLabel>
           <Select value={frequency} onChange={(e) => setFrequency(e.target.value as 'daily' | "weekly")}>
                 <MenuItem value= "daily">Daily</MenuItem>
