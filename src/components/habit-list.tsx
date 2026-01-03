@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "../store/store";
-import { Box, Button, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Grid, LinearProgress, Paper, Typography } from "@mui/material";
 import { CheckCircle, Delete } from "@mui/icons-material";
 import {  toggleHabit, removeHabit } from "../store/habit-slice";
 import type { Habit } from "../store/habit-slice";
@@ -70,6 +70,8 @@ const HabitList: React.FC = () => {
                 <Typography variant="body2">
                     Current Streak: {getStreak(habit)} days
                 </Typography>
+                <LinearProgress variant="determinate" value={(getStreak(habit) / 30 ) * 100}
+                sx={{mt: 1}} />
           </Box>
         </Paper>
       ))}
